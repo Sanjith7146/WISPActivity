@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You got Hacked!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: radial-gradient(circle, #000000, #1a1a1a);
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3rem;
+            animation: glitch 1s infinite;
+            text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+        }
+        h2 {
+            font-size: 3rem;
+            animation: glitch 1s infinite;
+            text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(2px, -2px); }
+            60% { transform: translate(-1px, 1px); }
+            80% { transform: translate(1px, -1px); }
+            100% { transform: translate(0); }
+        }
+
+        .sub-message {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #ffffff;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.9rem;
+            color: #ffffff;
+            white-space: nowrap;
+        }
+
+        .footer a {
+            color: #00ff00;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Good job buddy!</h1>
+        <h1> Your device is hacked and now Hope has access to all your information.....</h1>
+        <h2>Including your internet search history.....</h2>
+        <div class="sub-message">See la scan some more. </div>
+        <div class="sub-message">Better don't anyhow scan next time</div>
+        <div class="footer">This page is created for the "World Issues: A Singapore Perspective" Module in Ngee Ann Polytechnic Group Project </div>
+    </div>
+</body>
+</html>

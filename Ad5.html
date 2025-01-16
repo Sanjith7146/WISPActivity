@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Verified</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://cdn.theonlinecitizen.com/uploads/2019/03/27050057/finance-minister-heng-swee-keat-gives-a-thumbs-up.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #1fd825;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            animation: move 1s infinite alternate, fadeIn 1s ease-in-out;
+            position: relative;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+            25% {
+                transform: translateY(-20px) translateX(10px);
+            }
+            50% {
+                transform: translateY(0) translateX(20px);
+            }
+            75% {
+                transform: translateY(20px) translateX(10px);
+            }
+            100% {
+                transform: translateY(0) translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .sub-message {
+            margin-top: 20px;
+            font-size: 2.0rem;
+            color: #c42121;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.9rem;
+            color: #ffffff;
+            white-space: nowrap;
+        }
+
+        .footer a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Firework GIF - no animation */
+        .firework-gif {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>You Are Correct, This QR Code Is Safe!</h1>
+        <div class="sub-message">Wa! Not bad ah! Quite hard to trick you ah!</div>
+        <div class="footer">This page is created for the "World Issues: A Singapore Perspective" Module in Ngee Ann Polytechnic Group Project</div>
+    </div>
+
+    <script>
+        // Array of firework GIF URLs
+        const fireworkUrls = [
+            'https://i.gifer.com/WS2k.gif', // Example firework GIF 1
+            'https://i.gifer.com/W31b.gif', // Example firework GIF 3
+            'https://i.gifer.com/Xysu.gif', // Example firework GIF 4
+        ];
+
+        // Function to create fireworks using GIFs
+        function createFirework() {
+            const fireworkGif = document.createElement('img');
+
+            // Select a random firework URL from the array
+            const randomIndex = Math.floor(Math.random() * fireworkUrls.length);
+            fireworkGif.src = fireworkUrls[randomIndex]; // Set random firework GIF
+
+            fireworkGif.classList.add('firework-gif');
+
+            // Set random position for the firework GIF
+            fireworkGif.style.left = Math.random() * 100 + 'vw';
+            fireworkGif.style.top = Math.random() * 100 + 'vh';
+
+            document.body.appendChild(fireworkGif);
+
+            // Remove the GIF after it has been on screen for a while (based on duration)
+            setTimeout(() => {
+                fireworkGif.remove();
+            }, 1000); // Adjust this to match the duration of your GIF
+        }
+
+        // Create a firework every 500 milliseconds (0.5 seconds)
+        setInterval(createFirework, 100);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
