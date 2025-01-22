@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit= cover">
     <title>QR Code Verified</title>
     <style>
         body {
@@ -13,7 +13,10 @@
             align-items: center;
             height: 100vh;
             background: url('https://cdn.theonlinecitizen.com/uploads/2019/03/27050057/finance-minister-heng-swee-keat-gives-a-thumbs-up.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background-size: contain;
+            background-attachment: local;
+            background-color: #000;
+            background-position: center center;
             color: #333;
             font-family: 'Arial', sans-serif;
             text-align: center;
@@ -21,7 +24,7 @@
         }
 
         h1 {
-            font-size: 4rem;
+            font-size: 5.5vw;
             font-weight: bold;
             color: #1fd825;
             text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -58,7 +61,7 @@
 
         .sub-message {
             margin-top: 20px;
-            font-size: 2.0rem;
+            font-size: 3vw;
             color: #c42121;
         }
 
@@ -67,7 +70,7 @@
             bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 0.9rem;
+            font-size: 1vw;
             color: #ffffff;
             white-space: nowrap;
         }
@@ -81,7 +84,6 @@
             text-decoration: underline;
         }
 
-        /* Firework GIF - no animation */
         .firework-gif {
             position: absolute;
             width: 200px;
@@ -97,36 +99,36 @@
     </div>
 
     <script>
-        // Array of firework GIF URLs
+
         const fireworkUrls = [
-            'https://i.gifer.com/WS2k.gif', // Example firework GIF 1
-            'https://i.gifer.com/W31b.gif', // Example firework GIF 3
-            'https://i.gifer.com/Xysu.gif', // Example firework GIF 4
+            'https://i.gifer.com/WS2k.gif', // firework GIF 1
+            'https://i.gifer.com/W31b.gif', // firework GIF 2
+            'https://i.gifer.com/Xysu.gif', // firework GIF 3
         ];
 
-        // Function to create fireworks using GIFs
+
         function createFirework() {
             const fireworkGif = document.createElement('img');
 
-            // Select a random firework URL from the array
+
             const randomIndex = Math.floor(Math.random() * fireworkUrls.length);
             fireworkGif.src = fireworkUrls[randomIndex]; // Set random firework GIF
 
             fireworkGif.classList.add('firework-gif');
 
-            // Set random position for the firework GIF
+
             fireworkGif.style.left = Math.random() * 100 + 'vw';
             fireworkGif.style.top = Math.random() * 100 + 'vh';
 
             document.body.appendChild(fireworkGif);
 
-            // Remove the GIF after it has been on screen for a while (based on duration)
+
             setTimeout(() => {
                 fireworkGif.remove();
-            }, 1000); // Adjust this to match the duration of your GIF
+            }, 1500); 
         }
 
-        // Create a firework every 500 milliseconds (0.5 seconds)
+
         setInterval(createFirework, 100);
     </script>
 </body>
